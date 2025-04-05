@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Header</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/user-options/logo-symbol.png" alt="Brand Logo">
+        <h2>Brand</h2>
+    </div>
+
+    <div class="search-container">
+        <input type="text" placeholder="Search">
+        <select>
+            <option>All category</option>
+        </select>
+        <button>Search</button>
+    </div>
+
+    <div class="user-logo">
+        <div class="user">
+            <img src="images/user-options/profile.png" alt="Profile">
+            <p>Profile</p>
+        </div>
+        <div class="user">
+            <img src="images/user-options/message.png" alt="Message">
+            <p>Message</p>
+        </div>
+        <div class="user">
+            <img src="images/user-options/heart.png" alt="Orders">
+            <p>Orders</p>
+        </div>
+        <div class="user">
+            <img src="images/user-options/cart.png" alt="My Cart">
+            <p>My Cart</p>
+        </div>
+    </div>
+
+</header>
+
+<div class="header-part-2">
+        
+    <nav class="navbar">
+    <img src="images/user-options/menu.png"><a href="#home">All catagory</a>
+        <a href="#about">Hot offers</a>
+        <a href="#services">Gift boxes</a>
+        <a href="#project">Projects</a>
+        <a href="#project">Menu item</a>
+        <a href="#contact">Help <i class="fa-sharp-duotone fa-solid fa-angle-down"></i></a>
+    </nav>
+
+<div class="navbar-2">
+    <div class="col-1">
+        <p>English, USD <i class="fa-sharp-duotone fa-solid fa-angle-down"></i></p>
+</div>
+<div class="col-1">
+    <p>Ship to <img src="images/user-options/flag.png"> <i class="fa-sharp-duotone fa-solid fa-angle-down"></i></p>
+</div>
+</div>
+
+</div>
+<hr>
+
+
+    <div class="container">
+        <div class="product-container">
+            <div class="product-image">
+                <img src="images/shirt1.jpeg" alt="Product Image" class="main-image" id="mainImage">
+                <div class="thumbnails">
+                    <img src="images/shirt2.jpeg" alt="Thumbnail" class="thumbnail active" onclick="changeImage(this)">
+                    <img src="images/shirt1.jpeg" alt="Thumbnail" class="thumbnail" onclick="changeImage(this)">
+                    <img src="images/shirt2.jpeg" alt="Thumbnail" class="thumbnail" onclick="changeImage(this)">
+                </div>
+            </div>
+            <div class="product-details">
+                <h1>Men Long Sleeve T-Shirt Cotton Layer</h1>
+                <div class="price">
+                    <span class="original-price">$199.99</span>
+                    <span class="current-price">$149.99</span>
+                    <span class="discount">(25% OFF)</span>
+                </div>
+                <p class="description">
+                    High-quality wireless headphones with noise cancellation, 30-hour battery life, 
+                    and premium sound quality. Perfect for music lovers and professionals.
+                </p>
+                
+                <div class="customization">
+                    <label>Color:</label>
+                    <select id="colorSelect">
+                        <option>Blue</option>
+                        <option>Grey</option>
+                        <option>Black</option>
+                    </select>
+
+                    <label>Size:</label>
+                    <select id="sizeSelect">
+                        <option>Standard</option>
+                        <option>Large</option>
+                    </select>
+                </div>
+
+                <div class="seller-info">
+                    <h3>Seller Information</h3>
+                    <div class="rating">
+                        â˜…â˜…â˜…â˜…â˜… (4.8/5)
+                    </div>
+                    <div class="location">
+                        ðŸ“ New York, USA | 500+ Sold
+                    </div>
+                </div>
+
+                <button class="inquiry-btn" onclick="sendInquiry()">Send Inquiry</button>
+            </div>
+        </div>
+        <div class="supplier-card">
+            <!-- <button class="save-button" onclick="toggleSave(this)">
+                <span class="material-icons">favorite_border</span>
+            </button> -->
+            
+            <div class="supplier-header">
+                <div class="logo-placeholder">O</div>
+                <div class="supplier-info">
+                    <div class="supplier-name">Supplier <br>
+                    Guajnao Training LLC </div>
+                    <div class="company-details">
+                        <div>New York, USA</div>
+                        <div class="verified-badge">
+                            <span class="material-icons">verified</span>
+                            Verified Supplier
+                        </div>
+                        <div>Worldwide Shipping Available</div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="inquiry-button">Send Inquiry</button>
+            <a href="#" class="seller-profile">View Seller's Profile</a>
+            <br>
+            <a href="#" class="seller-profile">Save For Later</a>
+
+            </div>
+            
+            <script>
+            function toggleSave(button) {
+                const icon = button.querySelector('.material-icons');
+                const isSaved = icon.textContent === 'favorite';
+                icon.textContent = isSaved ? 'favorite_border' : 'favorite';
+                button.style.color = isSaved ? '#666' : '#e53935';
+            }
+            </script>
+    </div>
+
+    <script>
+        function changeImage(thumbnail) {
+            const mainImage = document.getElementById('mainImage');
+            document.querySelectorAll('.thumbnail').forEach(img => img.classList.remove('active'));
+            thumbnail.classList.add('active');
+            mainImage.src = thumbnail.src.replace('100x100', '600x400');
+        }
+
+        function sendInquiry() {
+            const color = document.getElementById('colorSelect').value;
+            const size = document.getElementById('sizeSelect').value;
+            
+            // Add your inquiry submission logic here
+            alert(`Inquiry sent for ${color} ${size} variant!`);
+        }
+    </script>
+</body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Product Main Section */
+        .product-main {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .product-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Tabs Styling */
+        .tabs {
+            margin: 2rem 0;
+        }
+
+        .tab-buttons {
+            display: flex;
+            border-bottom: 2px solid #eee;
+        }
+
+        .tab-btn {
+            padding: 1rem 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            border-bottom: 3px solid #007bff;
+            font-weight: bold;
+        }
+
+        .tab-content {
+            padding: 2rem 0;
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Specifications Table */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .specs-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .specs-table td:first-child {
+            font-weight: bold;
+            width: 30%;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .recommended-products {
+            margin-top: 1rem;
+        }
+
+        .product-card {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateX(5px);
+            background: #f8f9fa;
+        }
+
+        .product-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .tab-buttons {
+                flex-wrap: wrap;
+            }
+
+            .tab-btn {
+                flex: 1 1 50%;
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Main Product Section -->
+        <div class="product-main">
+           
+
+            <div class="tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="description">Description</button>
+                    <button class="tab-btn" data-tab="reviews">Reviews (15)</button>
+                    <button class="tab-btn" data-tab="shipping">Shipping</button>
+                    <button class="tab-btn" data-tab="seller">About Seller</button>
+                </div>
+
+                <div class="tab-content active" id="description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            
+                    <div class="specs-table">
+                        <table>
+                            <tr>
+                                <td>Model</td>
+                                <td>#87875</td>
+                            </tr>
+                            <tr>
+                                <td>Style</td>
+                                <td>Classic Style</td>
+                            </tr>
+                            <tr>
+                                <td>Battery Life</td>
+                                <td>Up to 30 hours</td>
+                            </tr>
+                            <tr>
+                                <td>Certified</td>
+                                <td>ISO -67374 </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="reviews">
+                    <h3>Customer Reviews</h3>
+                    <p>No reviews yet. Be the first to review this product!</p>
+                </div>
+
+                <div class="tab-content" id="shipping">
+                    <h3>Shipping Information</h3>
+                    <p>Free worldwide shipping. Delivery time: 3-7 business days.</p>
+                </div>
+
+                <div class="tab-content" id="seller">
+                    <h3>About the Seller</h3>
+                    <p>Premium Electronics Ltd. - Established 2010</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>You May Also Like</h3>
+            <div class="recommended-products">
+                <div class="product-card">
+                    <img src="images/shirt3.jpeg" alt="Product">
+                    <div>
+                        <h4>Wireless Earbuds</h4>
+                        <p>$99.99</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/shirt4.jpeg" alt="Product">
+                    <div>
+                        <h4>Bluetooth Speaker</h4>
+                        <p>$149.99</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/shirt5.jpeg" alt="Product">
+                    <div>
+                        <h4>Noise Canceling Headphones</h4>
+                        <p>$199.99</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/shirt2.jpeg" alt="Product">
+                    <div>
+                        <h4>Noise Canceling Headphones</h4>
+                        <p>$199.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab Switching Functionality
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.dataset.tab;
+                
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                button.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Optional Product Card Hover Effect
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateX(5px)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Page</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Related Products Section -->
+        <section class="related-products">
+            <h2 class="section-title">Related Products</h2>
+            <div class="products-container">
+                <!-- Product Cards -->
+                <div class="product-card">
+                    <img src="images/item.jpeg" alt="Product" class="product-image">
+                    <h3 class="product-name">Wireless Headphones</h3>
+                    <p class="price-range">$99 - $199</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/item1.jpeg" alt="Product" class="product-image">
+                    <h3 class="product-name">Smart Watch</h3>
+                    <p class="price-range">$149 - $299</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/item2.jpeg" alt="Product" class="product-image">
+                    <h3 class="product-name">Bluetooth Speaker</h3>
+                    <p class="price-range">$79 - $129</p>
+                </div>
+ <div class="product-card">
+                    <img src="images/item3.jpeg" alt="Product" class="product-image">
+                    <h3 class="product-name">Bluetooth Speaker</h3>
+                    <p class="price-range">$79 - $129</p>
+                </div>
+                
+            </div>
+        </section>
+<br>
+        <!-- Promotional Banner -->
+        <section class="promo-banner">
+            <div class="promo-content">
+                <h2 class="promo-title">Summer Sale!</h2>
+                <p class="promo-text">Get up to 50% off on selected items. Limited time offer - don't miss out!</p>
+                <button class="shop-now-btn">Shop Now</button>
+            </div>
+            <div class="promo-image">
+                <!-- Add your promotional image here -->
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Optional horizontal scroll buttons (add these to your HTML if needed)
+        // <button class="scroll-btn left">â®</button>
+        // <button class="scroll-btn right">â¯</button>
+
+        const productsContainer = document.querySelector('.products-container');
+        const scrollAmount = 300; // Adjust scroll amount as needed
+
+        // Smooth horizontal scrolling
+        function scrollProducts(direction) {
+            productsContainer.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+
+        // Product card hover effect
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Optional: Add event listeners for scroll buttons
+        // document.querySelector('.scroll-btn.left').addEventListener('click', () => scrollProducts('left'));
+        // document.querySelector('.scroll-btn.right').addEventListener('click', () => scrollProducts('right'));
+    </script>
+    <footer>
+        <footer-container>
+            <div class="footer-row">
+                <div class="col">
+                    <div class="content">
+                        <div class="brand-img">
+                            <img src="images/user-options/logo-symbol.png">
+                            <h2>Brand</h2>
+                        </div>
+                       
+                        <p>Best information about the company  gies here but now lorem ipsum is .</p>
+                </div>
+                <div class="footer-icons">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                </div>
+                <div class="col">
+                    <div class="links">
+                        <h2>About</h2>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">find store</a></li>
+                            <li><a href="#">catagories</a></li>
+                            <li><a href="#">blogs</a></li>
+                        </ul>
+                    </div>
+                    </div>
+        
+        
+                    <div class="col">
+                        <div class="links">
+                            <h2>Partnership</h2>
+                            <ul>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">find store</a></li>
+                                <li><a href="#">catagories</a></li>
+                                <li><a href="#">blogs</a></li>
+                            </ul>
+                        </div>
+                        </div>
+        
+                        <div class="col">
+                            <div class="links">
+                                <h2>Information</h2>
+                                <ul>
+                                    <li><a href="#">Help Center</a></li>
+                                    <li><a href="#">Money Refund</a></li>
+                                    <li><a href="#">Shipping</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                </ul>
+                            </div>
+                            </div>
+        
+                            <div class="col">
+                                <div class="links">
+                                    <h2>For users</h2>
+                                    <ul>
+                                        <li><a href="#">login</a></li>
+                                        <li><a href="#">register</a></li>
+                                        <li><a href="#">settings</a></li>
+                                        <li><a href="#">my orders</a></li>
+                                    </ul>
+                                </div>
+                                </div>
+        
+                                <div class="col">
+                                    <div class="links">
+                                        <h2>Get app</h2>
+                                       <div class="google-img">
+                                        <img src="images/user-options/google.webp">
+                                        <img src="images/user-options/app-store-badge.png">
+                                       </div>
+                                    </div>
+                                    </div>
+        
+        
+                                </div>
+                                </footer-container>
+                                </footer>
+        
+        <hr>
+                               
+                                    <div class="copy-right">
+                                        <div class="copy-row">
+                                            <div class="col">
+                            
+                                                <p class="copyright">© 2023 Ecommerce.</p>
+                                            </div>
+                                            <div class="col-1">
+                                                <p> <img src="images/user-options/flag.png">English<i class="fa-sharp-duotone fa-solid fa-angle-down"></i></p>
+                                            </div>
+                                            </div>
+                                        </div>
+                            <hr>
+        
+</body>
+</html>

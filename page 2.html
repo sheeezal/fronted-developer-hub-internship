@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand - Mobile Accessories</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS if necessary -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+       
+        .container {
+            display: flex;
+            padding: 10px;
+        }
+        .sidebar {
+            width: 20%;
+            padding: 10px;
+            background-color: #d7e0e1;
+            border-right: 1px solid #ddd;
+        }
+        .main-content {
+            width: 80%;
+            padding: 20px;
+
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 25px;
+            padding: 10px;
+            background-color: #fff;
+        }
+        ul {
+            list-style: none; /* Removes the dots */
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #333;
+            border-radius: 6px; /* Makes it a soft square */
+            display: inline-block;
+            position: relative;
+        }
+
+        input[type="radio"]:checked {
+            background-color: #333;
+        }
+
+        input[type="radio"]::before {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 3px;
+        }
+
+        input[type="radio"]:checked::before {
+            background-color: white;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        #priceContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #rangeInputs {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        input[type="number"] {
+            width: 80px;
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #36c3c7;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background-color: #fdf8f8;
+            color: rgb(96, 177, 212);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c1cee0;
+        }
+        .rating-stars {
+            color: #ffcc00;
+        }
+        .right {
+            flex: 2.2;
+            background: #e4e4e4;
+        }
+
+        .section {
+            margin-bottom: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+        .section1{
+            margin-bottom: 10px;
+            padding:10px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            height:40px;
+        }
+         .section h4 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        #priceContainer {
+        display: flex;
+         flex-direction: column;
+         align-items: center;
+          gap: 10px;
+  }
+
+         #rangeInputs {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+  }
+
+  input[type="number"] {
+    width: 80px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #36c3c7;
+    border-radius: 5px;
+  }
+
+  button {
+    padding: 8px 15px;
+    background-color: #fdf8f8;
+    color: rgb(96, 177, 212);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #555;
+  }
+  .rating-stars {
+    color: #ffcc00;
+  }
+h3{
+    margin-bottom: 15px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/user-options/logo-symbol.png" alt="Brand Logo">
+            <h2>Brand</h2>
+        </div>
+    
+        <div class="search-container">
+            <input type="text" placeholder="Search">
+            <select>
+                <option>All category</option>
+            </select>
+            <button>Search</button>
+        </div>
+    
+        <div class="user-logo">
+            <div class="user">
+                <img src="images/user-options/profile.png" alt="Profile">
+                <p>Profile</p>
+            </div>
+            <div class="user">
+                <img src="images/user-options/message.png" alt="Message">
+                <p>Message</p>
+            </div>
+            <div class="user">
+                <img src="images/user-options/heart.png" alt="Orders">
+                <p>Orders</p>
+            </div>
+            <div class="user">
+                <img src="images/user-options/cart.png" alt="My Cart">
+                <p>My Cart</p>
+            </div>
+        </div>
+    
+    </header>
+    
+    <div class="header-part-2">
+            
+        <nav class="navbar">
+        <img src="images/user-options/menu.png"><a href="#home">All catagory</a>
+            <a href="#about">Hot offers</a>
+            <a href="#services">Gift boxes</a>
+            <a href="#project">Projects</a>
+            <a href="#project">Menu item</a>
+            <a href="#contact">Help <i class="fa-sharp-duotone fa-solid fa-angle-down"></i></a>
+        </nav>
+    
+    <div class="navbar-2">
+        <div class="col-1">
+            <p>English, USD <i class="fa-sharp-duotone fa-solid fa-angle-down"></i></p>
+    </div>
+    <div class="col-1">
+        <p>Ship to <img src="images/user-options/flag.png"> <i class="fa-sharp-duotone fa-solid fa-angle-down"></i></p>
+    </div>
+    </div>
+    
+    </div>
+    <hr>
+    
+
+    <div class="container">
+        <div class="sidebar">
+            <h3>Category</h3>
+            <ul>
+                <li>Mobile accessory</li>
+                <li>Electronics</li>
+                <li>Smartphones</li>
+                <li>Modern tech</li>
+            </ul>
+            <h3>Brands</h3>
+            <ul>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Samsung" checked>
+                        Samsung
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Apple">
+                        Apple
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Huawei">
+                        Huawei
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Pocco">
+                        Pocco
+                    </label>
+                </li>
+            </ul>
+            <h3>Brands</h3>
+            <ul>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Samsung" checked>
+                        Samsung
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Apple">
+                        Apple
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Huawei">
+                        Huawei
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Pocco">
+                        Pocco
+                    </label>
+                </li>
+            </ul>
+            <h3>Brands</h3>
+            <ul>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Samsung" checked>
+                        Samsung
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Apple">
+                        Apple
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Huawei">
+                        Huawei
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Pocco">
+                        Pocco
+                    </label>
+                </li>
+            </ul>
+            <h3>Brands</h3>
+            <div id="priceContainer">
+                <input type="range" id="priceRange" min="0" max="9999" value="5000" step="100" oninput="updatePriceLabel(this.value)">
+                <label for="priceRange" id="priceLabel">Price: $5000</label>
+              
+                <div id="rangeInputs">
+                  <input type="number" id="minPrice" min="0" max="9999" value="0" step="100" oninput="updateRange()">
+                  <input type="number" id="maxPrice" min="0" max="9999" value="9999" step="100" oninput="updateRange()">
+                </div>
+              
+                <button onclick="applyPriceFilter()">Apply</button>
+              </div>
+            <h3>Brands</h3>
+            <ul>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Samsung" checked>
+                        Samsung
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Apple">
+                        Apple
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Huawei">
+                        Huawei
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Pocco">
+                        Pocco
+                    </label>
+                </li>
+            </ul>
+            <h3>Brands</h3>
+            <ul>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Samsung" checked>
+                        Samsung
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Apple">
+                        Apple
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Huawei">
+                        Huawei
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="brand" value="Pocco">
+                        Pocco
+                    </label>
+                </li>
+            </ul>
+            <h3>Brands</h3>
+                <ul>
+                    
+                    <label> <input type="checkbox" name="brand" value="Pocco"> <li class="rating-stars">â˜…â˜…â˜…â˜…â˜†</li></label>
+                    <label> <input type="checkbox" name="brand" value="Pocco">   <li class="rating-stars">â˜…â˜…â˜…â˜†â˜†</li></label>
+                        <label> <input type="checkbox" name="brand" value="Pocco"><li class="rating-stars">â˜…â˜…â˜†â˜†â˜†</li></label>
+                            <label> <input type="checkbox" name="brand" value="Pocco"><li class="rating-stars">â˜…â˜†â˜†â˜†â˜†</li></label>
+                               <p>See All</p>
+                </ul>
+            
+            <!-- Other sidebar content like Price Range, Features, etc. -->
+        </div>
+
+        <div class="main-content">
+            <div class="section1" style="display: flex; justify-content: space-between; align-items: center;">
+                <h5>12,911 items in Mobile Accessory</h5>
+                <div style="display: flex; align-items: center;">
+                    <input type="checkbox" name="Verified" value="Verified">
+                    <span>Verified by</span>
+                    <!-- <button style="margin-left: 20px; padding: 5px 10px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">Featured Selection</button> -->
+                    <div style="margin-left: 15px; display: flex; gap: 10px;">
+                        <select style="padding: 5px; border: 1px solid #ccc; border-radius: 5px;">
+                            <option value="option1">Featured</option>
+                            <option value="option2">Electronics</option>
+                            <option value="option3">Metalic</option>
+                        </select>
+                        <!-- Example icons (use your own icons or icon libraries like Font Awesome) -->
+                        <i class="fas fa-heart" style="font-size: 20px; color: #FF6347;"></i>
+                        <i class="fas fa-share" style="font-size: 20px; color: #4CAF50;"></i>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            <!-- Section 1 -->
+            <div class="section" style="display: flex; align-items: center;">
+                <img src="images/tech/6.jpg" style="height: 150px;">
+                <div>
+                    <!-- <h4>New Arrivals</h4>
+                    <p>Explore the latest mobile accessories.</p> -->
+                    <div style="font-weight: bold;">Canon Camera</div>
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="font-size: 20px;">$999.0</div>
+                        <div style="text-decoration: line-through; font-size: 16px;">$110.0</div>
+                        <div>154 orders</div>
+                        <div style="color: green;">Free Shipping</div>
+                    </div>
+                    <div style="color: gold; display: inline;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Vivamus lacinia mi vel leo sollicitudin, in eleifend dui tempus. Nulla euismod augue vel risus pretium,</div>
+                    
+                    <div style="color: blue; cursor: pointer; text-decoration: underline; margin-top: 15px;">View Details</div>
+                </div>
+            </div>
+            
+            
+            
+            <!-- Section 2 -->
+            <div class="section" style="display: flex; align-items: center;">
+                <img src="images/tech/1.jpg" style="height: 150px;">
+                <div>
+                    <!-- <h4>New Arrivals</h4>
+                    <p>Explore the latest mobile accessories.</p> -->
+                    <div style="font-weight: bold;">GoPro Hero 4K Action Camera - Black</div>
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="font-size: 20px;">$999.0</div>
+                        <div style="text-decoration: line-through; font-size: 16px;">$110.0</div>
+                        <div>154 orders</div>
+                        <div style="color: green;">Free Shipping</div>
+                    </div>
+                    <div style="color: gold; display: inline;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Vivamus lacinia mi vel leo sollicitudin, in eleifend dui tempus. Nulla euismod augue vel risus pretium,</div>
+                    <div style="color: blue; cursor: pointer; text-decoration: underline; margin-top: 15px;">View Details</div>
+                </div>
+            </div>
+            <!-- Section 3 -->
+            <div class="section" style="display: flex; align-items: center;">
+                <img src="images/tech/2.jpg" style="height: 150px;">
+                <div>
+                    <!-- <h4>New Arrivals</h4>
+                    <p>Explore the latest mobile accessories.</p> -->
+                    <div style="font-weight: bold;">GoPro Hero 4K Action Camera - Black</div>
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="font-size: 20px;">$999.0</div>
+                        <div style="text-decoration: line-through; font-size: 16px;">$110.0</div>
+                        <div>154 orders</div>
+                        <div style="color: green;">Free Shipping</div>
+                    </div>
+                    <div style="color: gold; display: inline;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Vivamus lacinia mi vel leo sollicitudin, in eleifend dui tempus. Nulla euismod augue vel risus pretium,</div>
+                    <div style="color: blue; cursor: pointer; text-decoration: underline; margin-top: 15px;">View Details</div>
+                </div>
+            </div>
+            <!-- Section 4 -->
+            <div class="section" style="display: flex; align-items: center;">
+                <img src="images/tech/5.jpg" style="height: 150px;">
+                <div>
+                    <!-- <h4>New Arrivals</h4>
+                    <p>Explore the latest mobile accessories.</p> -->
+                    <div style="font-weight: bold;">GoPro Hero 4K Action Camera - Black</div>
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="font-size: 20px;">$999.0</div>
+                        <div style="text-decoration: line-through; font-size: 16px;">$110.0</div>
+                        <div>154 orders</div>
+                        <div style="color: green;">Free Shipping</div>
+                    </div>
+                    <div style="color: gold; display: inline;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Vivamus lacinia mi vel leo sollicitudin, in eleifend dui tempus. Nulla euismod augue vel risus pretium,</div>
+                    <div style="color: blue; cursor: pointer; text-decoration: underline; margin-top: 15px;">View Details</div>
+                </div>
+            </div>
+            <!-- Section 5 -->
+            <div class="section" style="display: flex; align-items: center;">
+                <img src="images/tech/4.jpg" alt="Placeholder Image" style="margin-right: 20px; height: 150px; ">
+                <div>
+                    <!-- <h4>New Arrivals</h4>
+                    <p>Explore the latest mobile accessories.</p> -->
+                    <div style="font-weight: bold;">GoPro Hero 4K Action Camera - Black</div>
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="font-size: 20px;">$999.0</div>
+                        <div style="text-decoration: line-through; font-size: 16px;">$110.0</div>
+                        <div>154 orders</div>
+                        <div style="color: green;">Free Shipping</div>
+                    </div>
+                    <div style="color: gold; display: inline;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Vivamus lacinia mi vel leo sollicitudin, in eleifend dui tempus. Nulla euismod augue vel risus pretium,</div>
+                    <div style="color: blue; cursor: pointer; text-decoration: underline; margin-top: 15px;">View Details</div>
+                </div>
+            </div>
+            <!-- Section 6 -->
+            <div class="section" style="display: flex; align-items: center;">
+                <img src="images/tech/7.jpg" alt="Placeholder Image" style="margin-right: 20px; height: 150px;">
+                <div>
+                    <!-- <h4>New Arrivals</h4>
+                    <p>Explore the latest mobile accessories.</p> -->
+                    <div style="font-weight: bold;">GoPro Hero 4K Action Camera - Black</div>
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="font-size: 20px;">$999.0</div>
+                        <div style="text-decoration: line-through; font-size: 16px;">$110.0</div>
+                        <div>154 orders</div>
+                        <div style="color: green;">Free Shipping</div>
+                    </div>
+                    <div style="color: gold; display: inline;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Vivamus lacinia mi vel leo sollicitudin, in eleifend dui tempus. Nulla euismod augue vel risus pretium,</div>
+                    <div style="color: blue; cursor: pointer; text-decoration: underline; margin-top: 15px;">View Details</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <div class="newletter-content">
+                <h2>Subscribe on our newsletter</h2>
+                <p>Get daily news on upcoming offers from many suppliers all over the world</p>
+            </div>
+            <form action="#" class="newsletter-form">
+                <input type="email" placeholder="email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    
+
+    <footer>
+        <footer-container>
+            <div class="footer-row">
+                <div class="col">
+                    <div class="footer-content">
+                        <div class="brand-img">
+                            <img src="images/user-options/logo-symbol.png">
+                            <h2>Brand</h2>
+                        </div>
+                        <p>Best information about the company  gies here but now lorem ipsum is.</p>
+        
+        </div>
+                <div class="footer-icons">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                </div>
+                <div class="col">
+                    <div class="links">
+                        <h2>About</h2>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">find store</a></li>
+                            <li><a href="#">catagories</a></li>
+                            <li><a href="#">blogs</a></li>
+                        </ul>
+                    </div>
+                    </div>
+        
+        
+                    <div class="col">
+                        <div class="links">
+                            <h2>Partnership</h2>
+                            <ul>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">find store</a></li>
+                                <li><a href="#">catagories</a></li>
+                                <li><a href="#">blogs</a></li>
+                            </ul>
+                        </div>
+                        </div>
+        
+                        <div class="col">
+                            <div class="links">
+                                <h2>Information</h2>
+                                <ul>
+                                    <li><a href="#">Help Center</a></li>
+                                    <li><a href="#">Money Refund</a></li>
+                                    <li><a href="#">Shipping</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                </ul>
+                            </div>
+                            </div>
+        
+                            <div class="col">
+                                <div class="links">
+                                    <h2>For users</h2>
+                                    <ul>
+                                        <li><a href="#">login</a></li>
+                                        <li><a href="#">register</a></li>
+                                        <li><a href="#">settings</a></li>
+                                        <li><a href="#">my orders</a></li>
+                                    </ul>
+                                </div>
+                                </div>
+        
+                                <div class="col">
+                                    <div class="links">
+                                        <h2>Get app</h2>
+                                       <div class="google-img">
+                                        <img src="images/user-options/google.webp">
+                                        <img src="images/user-options/app-store-badge.png">
+                                       </div>
+                                    </div>
+                                    </div>
+        
+        
+                                </div>
+                                </footer-container>
+                                </footer>
+        
+        <hr>
+                               
+                                    <div class="copy-right">
+                                        <div class="copy-row">
+                                            <div class="col">
+                            
+                                                <p class="copyright">© 2023 Ecommerce.</p>
+                                            </div>
+                                            <div class="col-1">
+                                                <p> <img src="images/user-options/flag.png">English<i class="fa-sharp-duotone fa-solid fa-angle-down"></i></p>
+                                            </div>
+                                            </div>
+                                        </div>
+                            <hr>
+        
+        
+    
+
+        
+        
+    <script>
+        function updatePriceLabel(value) {
+            document.getElementById("priceLabel").textContent = "Price: $" + value;
+        }
+
+        function updateRange() {
+            let minPrice = document.getElementById("minPrice").value;
+            let maxPrice = document.getElementById("maxPrice").value;
+            let rangeInput = document.getElementById("priceRange");
+
+            rangeInput.min = minPrice;
+            rangeInput.max = maxPrice;
+            rangeInput.value = minPrice;
+            updatePriceLabel(minPrice);
+        }
+
+        function applyPriceFilter() {
+            let minPrice = document.getElementById("minPrice").value;
+            let maxPrice = document.getElementById("maxPrice").value;
+            let selectedPrice = document.getElementById("priceRange").value;
+
+            alert(`Price range applied:\nMin: $${minPrice}\nMax: $${maxPrice}\nSelected: $${selectedPrice}`);
+        }
+    </script>
+
+</body>
+</html>
